@@ -7,6 +7,7 @@ defmodule RosterApp.Rostering.Shift do
     field :end_time, :naive_datetime
     field :start_time, :naive_datetime
     field :user_id, :id
+    field :roster_id, :id
 
     timestamps()
   end
@@ -14,7 +15,7 @@ defmodule RosterApp.Rostering.Shift do
   @doc false
   def changeset(shift, attrs) do
     shift
-    |> cast(attrs, [:start_time, :end_time, :user_id])
-    |> validate_required([:start_time, :end_time, :user_id])
+    |> cast(attrs, [:start_time, :end_time, :user_id, :roster_id])
+    |> validate_required([:start_time, :end_time, :user_id, :roster_id])
   end
 end

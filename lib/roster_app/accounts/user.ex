@@ -7,6 +7,7 @@ defmodule RosterApp.Accounts.User do
     field :display_name, :string
     field :email, :string
     field :password, :string
+    many_to_many :organisations, RosterApp.Organisations.Organisation, join_through: RosterApp.Organisations.OrganisationUser
 
     timestamps()
   end

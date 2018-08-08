@@ -21,6 +21,10 @@ defmodule RosterAppWeb.Router do
     resources "/users", UserController
 
     resources "/shifts", ShiftController
+
+    resources "/rosters", RosterController
+
+    resources "/organisations", OrganisationController
   end
 
   # Other scopes may use custom stacks.
